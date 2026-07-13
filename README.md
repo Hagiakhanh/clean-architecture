@@ -1,12 +1,16 @@
 ```mermaid
 graph LR
-    classDef default fill:#f9f9f9,stroke:#333,stroke-width:1px;
-    classDef layer1 fill:#99ccff,stroke:#333,stroke-width:1.5px,font-weight:bold;
-    classDef layer2 fill:#ccffcc,stroke:#333,stroke-width:1px,font-weight:bold;
-    classDef layer3 fill:#fff,stroke:#666,stroke-width:1px,stroke-dasharray: 2 2,font-size:11px;
+    %% Styles cho nền tối (GitHub Dark Mode)
+    classDef default fill:#2d2d2d,stroke:#888,stroke-width:1px,color:#fff;
+    classDef root fill:#ff8888,stroke:#ff5555,stroke-width:2px,font-weight:bold,color:#000;
+    classDef layer2 fill:#5fbb97,stroke:#3a9672,stroke-width:1.5px,font-weight:bold,color:#000;
+    classDef layer3 fill:#1e1e1e,stroke:#aaaaaa,stroke-width:1px,stroke-dasharray: 3 3,color:#e0e0e0;
 
-    %% Root
-    am[8. Admin & Monitoring]:::layer1
+    %% Tăng độ tương phản cho đường nối liên kết giữa các node
+    linkStyle default stroke:#ffffff,stroke-width:1.5px;
+
+    %% Nút gốc (Center)
+    am[8. Admin & Monitoring]:::root
 
     %% NỬA BÊN TRÁI
     am_bs[Background Strategy]:::layer2 --- am
